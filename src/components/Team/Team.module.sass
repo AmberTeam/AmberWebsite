@@ -1,0 +1,112 @@
+@import '../../assets/vars.sass'
+
+section 
+	&.Team
+		min-height: auto!important
+	.Team_container 
+		.Team_header
+
+			h1
+				font-size: 3.375rem
+
+		.Team_content 
+			.Team_description 
+				padding-bottom: $d_pd_box_peaks
+				font-size: 22px
+
+			.Team_members
+				display: flex
+				justify-content: space-between
+				grid-gap: 1rem
+
+				.Member
+					width: 100%
+					display: flex
+					justify-content: space-between
+					align-items: center
+					box-shadow: 0px 0px 40px 2px rgba(0,0,0,0.1)
+					transition: $transit_hover
+					position: relative
+
+					.Member_description
+						height: 100%
+						width: 100%
+						border-top: 2px solid #000
+						border-bottom: 2px solid #000
+						border-left: 2px solid #000
+						border-top-left-radius: 6px
+						border-bottom-left-radius: 6px
+						padding: 1rem
+						display: grid
+						align-content: space-between
+						background: #000
+						position: relative
+
+						.Member_info
+
+							.Member_nickname
+								transition: $transit_hover
+								color: #fff
+								font-weight: 600
+								font-size: 18px
+
+							.Member_desc
+								margin-top: .5rem
+								color: #fff
+
+						.Member_soc
+							display: grid
+
+							.Soc
+								display: flex
+								gap: .3rem
+								align-items: center
+
+								svg 
+									fill: #fff
+									width: 16px
+
+								span 
+									color: #fff
+									font-size: 12px
+									font-family: GT America Mono Regular
+
+						.Polygon_1
+							z-index: 3
+							position: absolute 
+							bottom: -23px 
+							right: -23px
+							transform: rotate(12deg)
+
+
+					.Member_picture
+						z-index: 2
+						position: relative
+						img 
+							width: 150px
+							height: 150px
+							border-top-right-radius: 6px
+							border-bottom-right-radius: 6px
+					.Polygon_2
+						z-index: 1
+						position: absolute 
+						top: -30px
+						right: 60px
+						transform: rotate(0deg)
+
+					&:hover
+						transform: translateY(-10px)
+
+						.Member_description
+							.Member_info
+								.Member_nickname
+									color: $coral_def
+
+@media(max-width: $mobile_res) 
+	section 
+		.Team_container 
+			.Team_content 
+				.Team_members
+					display: grid
+
+		

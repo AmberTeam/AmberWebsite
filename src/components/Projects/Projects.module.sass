@@ -1,0 +1,123 @@
+@import '../../assets/vars.sass'
+
+section
+	.Projects_container
+		.Projects_header
+			padding-bottom: $d_pd_box_peaks
+
+			h1
+				font-size: 3.375rem
+		.Projects_content 
+			min-height: 75vh
+			display: grid
+			grid-template-columns: auto auto
+			grid-gap: 1rem
+
+			.Column 
+				display: grid
+				grid-gap: 1rem
+				width: 100%
+				position: relative
+
+				.Polygon_1
+					z-index: 2
+					position: absolute
+					left: -30px
+					top: -30px
+
+				.Polygon_2
+					z-index: 2
+					position: absolute
+					bottom: 45%
+					right: -30px
+					transform: rotate(325deg)	
+
+				.Project
+					position: relative
+					padding: 1rem
+					border: 3px solid #000
+					height: 100%
+					border-radius: 6px
+					display: grid
+					align-content: space-between
+					align-items: end
+					background: #000
+					transition: $transit_hover
+					z-index: 3
+
+					&:hover
+
+						.Content 
+							.Title
+								.Separator
+									width: calc(100% + 12px)
+
+					.Blurer
+						position: absolute
+						top: 0
+						bottom: 0
+						left: 0 
+						right: 0
+						z-index: 3
+
+					.Perks 
+						display: grid 
+						align-items: start
+
+						.Perk 
+							display: flex
+							align-items: center
+							padding: .5rem 0
+
+							.Perk_span 
+								transform: rotate(45deg)
+								width: 5px
+								height: 5px
+								background-color: #fff
+								margin-top: 2.5px
+								transition: $transit_hover
+
+							.Perk_description 
+								font-family: GT America Mono Regular
+								margin-left: .5rem
+								color: #fff
+								font-size: 12px
+
+							&:hover 
+								.Perk_span 
+									background-color: $coral_def
+
+
+					.Content
+						display: grid
+						justify-items: start
+						z-index: 4
+
+						.Title 
+							font-size: 32px
+							margin-bottom: .5rem
+							color: #fff
+
+							.Separator 
+								padding-top: 1px
+								width: 50px
+								display: block
+								margin-top: .5rem
+								background-color: $bg
+								transition: $transit_hover
+
+						.Description 
+							color: #fff
+
+@media(max-width: $mobile_res) 
+	section
+		.Projects_container
+			.Projects_content 
+				grid-template-columns: auto 
+
+				.Column 
+					.Polygon_1
+						display: none
+					.Polygon_2
+						display: none
+	

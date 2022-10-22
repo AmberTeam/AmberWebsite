@@ -1,0 +1,134 @@
+@import '../../assets/vars.sass'
+
+.Header_container 
+    z-index: 5
+    padding: $nav_pd__d calc($nav_pd__d * 2)
+    display: flex  
+    justify-content: space-between
+    align-items: center
+    background-color: $nav_bg
+    color: $nav_color
+    box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.1)
+
+    .Logo_container 
+        display: flex
+        align-items: center
+
+        p
+            margin-left: .5rem
+            color: $nav_color
+            font-family: GT AMERICA MONO REGULAR
+
+        img 
+            width: $nav_ic_w__d
+            height: $nav_ic_h__d
+
+    .Header_navigation 
+
+        .Hamburger_btn
+            display: none
+            background: transparent 
+            border: none 
+            outline: none
+            width: 37px
+            cursor: pointer
+
+            &.Active
+                .Line_1
+                    transform: rotate(45deg)
+                    position: relative
+                .Line_2
+                    transform: translateX(-100px)
+                    opacity: 0
+                    margin-top: 0px!important
+                .Line_3
+                    margin-top: 0px!important
+                    transform: rotate(-45deg)
+                    position: relative
+                    top: -2px
+
+            .Line 
+                background-color: #fff
+                height: 1px 
+                width: 100%
+                transition: .1s all ease
+
+                &.Line_1
+                &.Line_2
+                    margin-top: 5px
+                &.Line_3
+                    margin-top: 5px
+
+        .Navigation_list 
+            display: flex
+            gap: .5rem
+
+            .Mobile_header
+                display: none
+                justify-content: space-between
+                align-items: center
+
+                .Logo
+                    display: flex
+                    align-items: center
+
+                    p
+                        margin-left: .5rem
+                        color: #fff
+
+                    img 
+                        width: calc($nav_ic_w__d / 1.5)
+                        height: calc($nav_ic_h__d / 1.5)
+
+            .Navigation_a
+                text-decoration: none
+                transition: $transit_hover
+                color: $nav_color
+
+                &:hover 
+                    color: $coral_def
+
+            &.Mobile_active
+                transform: translateX(0)
+
+
+/* 4k */
+
+@media(min-width: $fth_res) 
+    .Header_container
+        padding: $nav_pd__fth
+        .Logo_container 
+            img 
+                width: $nav_ic_w__fth
+                height: $nav_ic_h__fth
+
+/* Mobile */
+
+@media(max-width: $mobile_res) 
+    .Header_container
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        padding: $nav_pd__m
+        .Logo_container 
+            img 
+                width: $nav_ic_w__m
+                height: $nav_ic_h__m
+
+        .Header_navigation
+            .Hamburger_btn
+                display: grid
+
+            .Navigation_list 
+                @include navbar_mobile_adaptive
+
+                .Mobile_header
+                    display: flex
+
+@media(max-width: 700px) 
+    .Header_container
+        .Header_navigation
+            .Navigation_list 
+                &.Mobile_active
+                    width: 100%

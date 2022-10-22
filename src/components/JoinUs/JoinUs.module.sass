@@ -1,0 +1,48 @@
+@import '../../assets/vars.sass'
+
+section 
+	&.Joinus 
+		display: grid 
+		align-content: center
+
+	.Joinus_container
+		position: relative 
+
+		.Polygon_1 
+			position: absolute
+			margin: 0 auto
+			left: 63% 
+			top: 20%
+			z-index: 1
+			transform: rotate(312deg)
+
+		.Polygon_2
+			position: absolute
+			margin: 0 auto
+			left: 34% 
+			top: 100%
+			z-index: 1
+			transform: rotate(278deg)
+
+
+		.Joinus_header
+			position: relative
+			z-index: 2
+			text-align: center
+
+			h1 
+				font-size: 3.375rem
+
+		.Joinus_content 
+			display: grid
+			justify-items: center
+
+			.Joinus_form 
+				display: grid
+				justify-items: start
+
+				button 
+					margin-top: 2rem
+
+				.Name 
+					margin-top: 2rem

@@ -1,0 +1,89 @@
+@import 'https://fonts.googleapis.com/css2?family=Montserrat&display=swap'
+
+
+@font-face
+  font-family: "GT America Mono Regular"
+  src: url('./GT America Mono Regular.ttf')
+  src: local('./GT America Mono Regular.ttf')
+  src: url('GT America Mono Regular.ttf') format('opentype')
+
+@font-face
+  font-family: "Roobert"
+  src: url('./Roobert-Regular.ttf')
+  src: local('./Roobert-Regular.ttf')
+  src: url('Roobert-Regular.ttf') format('opentype')
+
+/* Global */
+
+$color: #000
+$bg: #fff
+$bg_dark: #111111
+$bg_dark_rgb: 17, 17, 17
+$f_f: 'Roobert'
+$f_s: 'GT America Mono Regular'
+$coral_def: #ee724c
+$transit_hover: .2s all ease 
+
+$mobile_res: 1000px
+$fth_res: 2560px
+
+/* Navbar */
+
+$nav_pd__d: .5rem
+$nav_pd__fth: 2rem
+$nav_pd__m: .5rem
+$nav_ic_w__d: 44px
+$nav_ic_h__d: 44px
+$nav_ic_w__fth: 64px
+$nav_ic_h__fth: 64px
+$nav_ic_w__m: 44px
+$nav_ic_h__m: 44px
+$nav_open_transit: .3s all ease
+$nav_bg: #000
+$nav_color: #fff
+
+/* Footer */
+
+$foot_pd_d: 1rem 
+$foot_pd__fth: 2rem
+$foot_pd__m: .5rem
+$foot_bg: #000 
+$foot_color: #fff
+
+@mixin navbar_mobile_adaptive
+    background-color: $color
+    padding: calc($nav_pd__m * 2)
+    position: fixed 
+    top: 0 
+    bottom: 0
+    right: 0
+    width: calc(100vw - (100vw / 2))
+    height: 100vh 
+    transform: translateX(calc(100vw - (100vw / 2)))
+    transition: $nav_open_transit
+    display: grid
+    align-content: start
+
+    .Navigation_a
+        padding: 1rem 0
+
+
+/* Desktop vars */
+
+$d_pd_box_facets: 3rem
+$d_pd_box_peaks: 3rem
+$d_pd_nav: .5rem
+
+/* (4k > 8k) vars */
+
+$fth_pd_box_facets: 30rem
+$fth_pd_box_peaks: 15rem
+$fth_pd_nav: .5rem
+
+/* Mobile vars */
+
+$m_pd_box_facets: 1rem 
+$m_pd_box_peaks: 2rem
+$m_pd_nav: .5rem
+
+

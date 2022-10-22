@@ -1,0 +1,82 @@
+@import '../../assets/vars.sass'
+
+section
+	position: relative
+	display: grid
+	align-content: space-between 
+
+	&.About_welkome
+		display: grid
+		min-height: calc(100vh - 67px - ($d_pd_box_peaks * 2))!important
+		align-content: center
+
+	&.About_desc_container 
+		display: grid
+		align-content: center
+		min-height: 100vh!important
+
+	.Polygon_container
+		z-index: 2
+		position: absolute
+		top: 30%
+		right: 0
+		left: 50%
+		height: 240px
+
+		svg
+			position: absolute
+
+		.Polygon_1 
+			left: calc(50%)
+			top: calc(50% - 62px)
+
+		.Polygon_2 
+			left: calc(50% - 73px)
+			top: calc(50% + 11px)
+
+		.Polygon_3 
+			left: calc(50% - 81px)
+			top: calc(50% - 94px)
+
+		.Polygon_4 
+			left: calc(50% - 31px)
+			top: calc(50% - 18px)
+			animation-delay: 1.2s
+
+		.Polygon_5 
+			left: calc(50% + 12px)
+			top: calc(50% + 30px)
+			animation-delay: 1.4s
+
+		.Polygon_6 
+			left: calc(50% + 2px)
+			top: calc(50% - 80px)
+			animation-delay: 1.5s
+
+		.Polygon_7 
+			left: calc(50% - 87px)
+			top: calc(50% - 16px)
+
+	.About_container
+		z-index: 3
+		.About_header
+			h1
+				font-size: 4.6rem
+				text-transform: uppercase
+	.About_description 
+		position: relative
+		z-index: 4
+		display: grid
+		justify-items: end
+
+		p
+			z-index: 3
+			text-align: end
+			font-size: 1.875rem
+			font-weight: 700
+
+@media(max-width: $mobile_res)
+	section 
+		.Polygon_container
+			display: none
+

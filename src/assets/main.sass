@@ -1,0 +1,100 @@
+@import './vars.sass'
+
+*
+	box-sizing: border-box 
+	color: $color
+	font-family: $f_f
+
+img, svg
+	display: block
+
+body 
+	background-color: $bg
+	margin: 0
+	padding: 0
+
+	&::-webkit-scrollbar 
+		width: 2px
+ 
+	&::-webkit-scrollbar-thumb 
+		background-color: #000
+		outline: 1px solid #000
+
+.styled_btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	height: 2.875rem
+	border-radius: 0.125rem
+	padding: 0 1.25rem
+	overflow: hidden
+	transition: $transit_hover
+	outline: none 
+	border: none
+	font: 400 0.75rem/1 $f_s
+	color: $bg
+	background-color: $color
+	box-shadow: 0px 0px 40px 5px rgba(0,0,0,0.1)
+	cursor: pointer
+	border: 1px solid transparent
+
+	&:hover
+		border: 1px solid #000
+
+.styled_inp
+	padding: .6rem
+	outline: none
+	border: none
+	border-radius: 6px
+	min-width: 300px
+	font-family: GT America Mono Regular
+
+	&::placeholder
+		font-family: GT America Mono Regular
+		font-style: italic
+		font-size: 12px
+	
+	&::-ms-input-placeholder	
+		color: red
+
+
+	&::-ms-input-placeholder
+		color: red
+
+.inp_lab
+	border-bottom: 3px solid #000
+	min-width: 300px
+
+
+
+/* Mixins */
+
+@mixin section_paddset_desktop
+	margin: $d_pd_box_peaks $d_pd_box_facets
+
+@mixin section_paddset_fth
+	margin: $fth_pd_box_peaks $fth_pd_box_facets
+
+@mixin section_paddset_mobile
+	margin: $m_pd_box_peaks $m_pd_box_facets
+	
+
+
+section.pd_section 
+	@include section_paddset_desktop
+	min-height: 100vh
+
+
+/* 4k */
+
+@media(min-width: $fth_res) 
+	section.pd_section
+		@include section_paddset_fth
+
+/* Mobile */
+
+@media(max-width: $mobile_res)
+	section.pd_section
+		@include section_paddset_mobile
+
+
