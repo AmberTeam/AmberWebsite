@@ -9,7 +9,7 @@
 </script>
 
 <template>
-    <header :class="cl.Header_container">
+    <header id="test" :class="cl.Header_container">
         <div :class="cl.Logo_container">
             <img src="../../assets/logo.svg"/>
             <p>Amber</p>
@@ -34,11 +34,11 @@
                         </button>
                     </div>
                 </div>
-                <a :class="cl.Navigation_a" href="#home">Home</a>
-                <a :class="cl.Navigation_a" href="#about">About</a>
-                <a :class="cl.Navigation_a" href="#projects">Projects</a>
-                <a :class="cl.Navigation_a" href="#team">Team</a>
-                <a :class="cl.Navigation_a" href="#joinus">Join Us</a>
+                <a @click="store.nav_active = false" :class="cl.Navigation_a" href="#home">Home</a>
+                <a @click="store.nav_active = false" :class="cl.Navigation_a" href="#about">About</a>
+                <a @click="store.nav_active = false" :class="cl.Navigation_a" href="#projects">Projects</a>
+                <a @click="store.nav_active = false" :class="cl.Navigation_a" href="#team">Team</a>
+                <a @click="store.nav_active = false" :class="cl.Navigation_a" href="#joinus">Join Us</a>
             </div>
         </nav>
     </header>

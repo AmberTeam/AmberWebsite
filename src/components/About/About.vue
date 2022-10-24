@@ -78,15 +78,15 @@
 			<div :class="cl.About_header">
 				<h1> Amber Team </h1>
 			</div>
-			<button class="btn_def styled_btn">
+			<a class="btn_def styled_btn" href="#projects">
 				Our Projects
-			</button> 
+			</a> 
 		</div>	
 	</section>
 	<section id="about" class="pd_section" :class="cl.About_desc_container">
 		<div :class="cl.About_description">
 			<p> Amber Team - This is a young open source development team looking for partners to create something new. The one that will change the world </p>
-			<button class="styled_btn"> Join Us </button>
+			<a href="#joinus" class="styled_btn"> Join Us </a>
 		</div>	
 	</section>
 </template>
