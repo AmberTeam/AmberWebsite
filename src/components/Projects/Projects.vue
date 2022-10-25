@@ -35,18 +35,14 @@
 								<span :class="cl.Perk_span"></span>
 								<span :class="cl.Perk_description"> In developing </span>
 							</div>
-							<div :class="cl.Perk">
-								<span :class="cl.Perk_span"></span>
-								<span :class="cl.Perk_description"> Search for developers </span>
-							</div>
 						</div>
 						<div :class="cl.Content">
 							<div :class="cl.Title"> 
-								Kitead
+								Rubbit
 								<span :class="cl.Separator"></span>
 							</div>
 							<div :class="cl.Description">
-								Platform, that helps people choose their specialization.
+								Analogue of Git.
 							</div>
 						</div>
 					</div>
