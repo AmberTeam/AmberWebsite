@@ -38,7 +38,7 @@
 						</div>
 						<div :class="cl.Content">
 							<div :class="cl.Title"> 
-								Rubbit
+								Rock
 								<span :class="cl.Separator"></span>
 							</div>
 							<div :class="cl.Description">
